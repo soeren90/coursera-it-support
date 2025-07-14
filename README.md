@@ -5,7 +5,7 @@ I'm using this repo to track my progress and document useful content - all notes
 
 ## Contents
 
-- `notizen.pdf`: Full course notes (PDF)
+- `Lernunterlagen IT Support Specialist`: Full course notes (PDF)
 - `zusammenfassung.md`: Course summary in German
 - `linux-befehle.md`: Linux commands with explanations
 - `python-uebungen/`: Small Python exercises related to IT support
