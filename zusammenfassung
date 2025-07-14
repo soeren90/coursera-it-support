@@ -1,0 +1,1294 @@
+# Geschichte des Computers
+
+**Netzwerk:** Zusammenschluss von mehreren Computern, die Daten austauschen und zusammenarbeiten.
+
+- Difference Engine  
+- Analytical Engine (Lochkarten) → sehr fortgeschrittener Rechner  
+- Algorithmus: Eine Reihe von Schritten zur Lösung bestimmter Probleme  
+- Kryptographie: Die Kunst, Codes zu schreiben und zu entschlüsseln  
+- Bis 1950er: Lochkarten  
+- Danach: Magnetband → Daten werden auf Magnetband magnetisiert  
+- ENIAC – erster riesiger Computer  
+- Compiler: Möglichkeit, menschliche Sprache mithilfe einer Programmiersprache in Computercode zu übersetzen  
+- Anfangs vor allem im Militär und an Universitäten eingesetzt  
+- 1970er: Erster Apple Computer für zuhause → Apple II großer Erfolg  
+- 1980er: IBM führt PC ein → Microsoft Disk Operating System (MS-DOS)  
+- Später: Microsoft Windows, bevorzugtes Betriebssystem in Unternehmen, da auf kompatibler Hardware lauffähig  
+- Arcade-Spiele in 70er und 80er beliebt → Video-Games  
+- Atari Video Computer System  
+- Stallman → Entwicklung eines kostenlosen, Unix-ähnlichen Betriebssystems → GNU  
+- GNU = Open-Source (Code ist quelloffen), sodass jeder ihn ändern und weitergeben kann  
+- GNU war kein vollständiges Betriebssystem, aber Grundlage für Linux = größtes Open-Source-Betriebssystem  
+- Mozilla Firefox = Open-Source-Browser  
+- Anfang 90er: PDAs (Personal Digital Assistants) → Vorläufer von Handys
+
+---
+
+# Computer Grundlagen
+
+Computer sind Geräte, die Berechnungen durchführen, um Daten zu verarbeiten und zu speichern.  
+Je höher die Rechenleistung, desto größer die Möglichkeiten.
+
+- Computer rechnen mit 0en und 1en  
+- Beispiel: 0+1 oder 1+1 ist einfach, aber bei Milliarden Rechnungen wird es komplex  
+- **Binärsystem:** Das Zahlensystem, das Computer verwenden (Basis 2)  
+- Es funktioniert wie Buchstaben: Unterschiedliche Kombinationen haben unterschiedliche Bedeutungen  
+- Computing gruppiert Binärzahlen in 8 Bits  
+- **Bit:** Binary Digit, also 0 oder 1  
+- 2^8 Zahlen sind ausreichend für viele Berechnungen  
+- 8-Bit-Gruppierung wurde Branchenstandard  
+- **Byte:** Gruppe aus 8 Bits  
+- Jedes Byte kann ein Zeichen speichern, insgesamt 256 mögliche Werte (wegen Basis 2)  
+- Ein Byte kann z.B. einen Buchstaben darstellen
+
+---
+
+# Digitale Logik
+
+- **Character Encoding:** Ordnet Binärwerte Zeichen zu, damit Menschen diese lesen können (wie ein Wörterbuch)  
+- **ASCII:** Ältester Standard für Zeichencodierung  
+- ASCII war irgendwann nicht mehr genug, weil mehr Zeichen gebraucht wurden  
+- **UTF-8:** Heutiger gängiger Standard für Zeichencodierung  
+- UTF-8 kann Zeichen in mehreren Bytes speichern (z.B. Emojis)  
+- Basierend auf Unicode-Standard → einheitliche Zeichencodierung  
+- **Farbdarstellung:** RGB (Red Green Blue)  
+- RGB verwendet 3 Werte, jeder steht für einen Farbton und verändert die Pixel-Farbe  
+- Alles auf dem Computer wird durch Kombinationen von Nullen und Einsen dargestellt (Buchstaben, Bilder, Videos)
+
+---
+
+# Binärsystem
+
+- Vorstellbar wie Lichter: 0 = aus, 1 = an (ähnlich wie Lochkarten)  
+- Elektrizität über Transistoren: Spannung = 1, keine Spannung = 0  
+- Transistoren allein reichen nicht (Beispiel: Raum mit 2 Lichtschaltern, die das Licht an- und ausschalten sollen, egal welcher Schalter betätigt wird)  
+- **Logic Gates (Logikgatter):** Erlauben Transistoren komplexere Aufgaben, z.B. Entscheidungen, wohin elektrische Signale geschickt werden, abhängig von logischen Bedingungen  
+- Schaltkreise bestehen aus solchen Logikgattern
+
+---
+
+# Im Binärsystem zählen
+
+- Mit dem Dezimalsystem können wir ermitteln, welche Bits der Computer verwenden kann  
+- Jede Zahl kann mit Bits dargestellt werden  
+- Dezimalsystem: 0-9  
+- Binärsystem: 0 und 1  
+- Die größte Dezimalzahl, die ein Byte darstellen kann, ist 255 (inklusive 0)
+
+---
+
+# Computerschichtenarchitektur
+
+**Abstraktion:**  
+- Wir nehmen ein relativ komplexes System und vereinfachen es für die Nutzung  
+- Beispiel Auto: Lenkrad und Pedale statt Motorsteuerung  
+- Beispiel Computer: Maus, Tastatur, Touchscreen statt Hardwaredetails  
+- Fehler-Meldungen sind auch Abstraktionen
+
+**Computerarchitektur – 4 Hauptschichten:**  
+1. Hardware (physische Komponenten)  
+2. Betriebssystem (vermittelt zwischen Hardware und Software)  
+3. Software (Programme, mit denen wir interagieren)  
+4. User (der Mensch, der den Computer benutzt)
+
+---
+
+# Computerhardware
+
+## 1. CPU (Central Processing Unit)
+- Das „Gehirn“ des Computers, das alle Berechnungen und Befehle ausführt.  
+- Arbeitet eng mit dem **RAM** zusammen (Kurzzeitspeicher).  
+- Verarbeitet Daten im **binären System** (0 und 1).  
+- Verfügt über Register, kleine Speicherplätze für Daten und Zwischenergebnisse.  
+- Besitzt einen Taktgeber (Taktzyklen), der die Verarbeitungsgeschwindigkeit bestimmt (z.B. 3,4 GHz).  
+- CPU erzeugt Wärme und benötigt einen Kühler (Kühlkörper + Lüfter).  
+- Verschiedene Hersteller und Modelle (Intel, AMD, Qualcomm).  
+- CPU-Sockel müssen kompatibel zum Motherboard sein (LGA, PGA).
+
+## 2. RAM (Random Access Memory)
+- Kurzzeitspeicher, in dem Programme und Daten während der Ausführung gehalten werden.  
+- Daten gehen verloren, wenn der Strom abgeschaltet wird (flüchtiger Speicher).  
+- Verschiedene Typen: DRAM, SDRAM, DDR (aktuell DDR4).  
+- Mehr RAM bedeutet, mehr Programme gleichzeitig ausführen und schnellere Verarbeitung.
+
+## 3. Motherboard
+- Verbindet alle Komponenten des Computers miteinander.  
+- Beinhaltet den Chipsatz:  
+  - **Northbridge:** Verbindet CPU, RAM und Grafikkarte.  
+  - **Southbridge:** Steuert Input/Output wie Festplatten, USB-Anschlüsse.  
+- Erweiterungssteckplätze (z.B. PCIe) erlauben den Einbau von Zusatzhardware.  
+- Unterschiedliche Formfaktoren: ATX (groß), ITX (kleiner).
+
+## 4. Speicher
+- Datenspeicher-Einheiten:  
+  - **Bit:** Kleinste Einheit, 0 oder 1.  
+  - **Byte:** 8 Bits, speichert z.B. einen Buchstaben oder eine Zahl.  
+- Zwei Hauptarten von Festplatten:  
+  - **HDD:** Mechanisch, mit beweglichen Teilen, anfälliger für Schäden.  
+  - **SSD:** Keine beweglichen Teile, schneller und robuster.  
+  - **Hybride:** Kombination aus HDD und SSD.  
+- Schnittstellen: SATA (für HDDs), NVMe (für SSDs, schnellere Übertragung).
+
+## 5. Netzteil
+- Wandelt Wechselstrom aus der Steckdose in Gleichstrom um, den der Computer benötigt.  
+- Wattzahl muss zur verbauten Hardware passen (z.B. 500 Watt Standard).  
+- Spannungsregler auf dem Motherboard verteilen die Spannung an die Komponenten.
+
+## 6. Peripheriegeräte und Ports
+- USB-Standards:  
+  - USB 2.0 (schwarz)  
+  - USB 3.0 (blau)  
+  - USB 3.1 (blaugrün)  
+- Abwärtskompatibel: USB 2.0-Geräte funktionieren auch an USB 3.0-Ports, aber mit geringerer Geschwindigkeit.  
+- Ports erweitern die Funktionalität (z.B. Maus, Tastatur, Drucker).
+
+## 7. BIOS / UEFI
+- Startprogramm, das beim Einschalten den Computer initialisiert und das Betriebssystem lädt.  
+- Läuft auf einem ROM-Chip (nichtflüchtiger Speicher).  
+- Führt den Power-On Self-Test (POST) durch, um Hardware zu prüfen.  
+- Moderne Systeme verwenden UEFI als moderneres BIOS mit besserer Hardware-Unterstützung.  
+- CMOS-Chip speichert BIOS-Einstellungen wie Datum, Uhrzeit und Boot-Reihenfolge.  
+- Startprobleme können durch Pieptöne (Fehlercodes) signalisiert werden.
+
+---
+
+## Nützliche Analogien
+
+- **CPU = Koch:** Verarbeitet Programme (Rezepte) Schritt für Schritt.  
+- **RAM = Kühlschrank:** Lagert Zutaten (Daten), die schnell verfügbar sind.  
+- **Cache = Hosentasche:** Noch schnellerer Speicher für häufig verwendete Daten.  
+- **Motherboard = Körper / Blutkreislauf:** Verbindet alle Teile des Computers.  
+- **External Data Bus (EDB) = Adern:** Transportiert Daten zwischen Komponenten.  
+- **Memory Controller Chip (MCC) = Brücke:** Verbindet CPU und RAM.
+
+---
+
+# Betriebssystem (Operating System)
+
+Ein Betriebssystem ist das Gesamtpaket zur Verwaltung der Ressourcen der Computer und lässt uns damit interagieren.  
+Ein Betriebssystem hat 2 Hauptbestandteile: den Kernel und den Benutzerbereich.  
+Der Kernel ist das Kernstück eines Betriebssystems – er kommuniziert direkt mit unserer Hardware und verwaltet die Ressourcen des Systems.  
+Als Benutzer interagieren wir nicht direkt mit dem Kernel – wir interagieren dafür mit dem zweiten Teil des Betriebssystems, dem Benutzerbereich.
+
+---
+
+## Windows, Mac & Linux
+
+- Einige gängige Linux-Distributionen sind Ubuntu, Debian und Red Hat.  
+- Mobiltelefone nutzen z.B. Chrome OS & Android OS, die einen Linux-Kernel unter der Haube haben.  
+- Der Prozess-Scheduler ist der Teil des Kernels, der Multitasking ermöglicht.  
+- I/O-Verwaltung sorgt für die Eingabe und Ausgabe von Daten.
+
+---
+
+## Dateien und Dateisysteme
+
+- 3 Hauptkomponenten zur Verwaltung von Dateien:  
+  - Dateidaten  
+  - Metadaten  
+  - Dateisystem  
+- Dateisysteme unterscheiden sich in Kapazität, Geschwindigkeit und Sicherheit.  
+- Windows nutzt hauptsächlich das Dateisystem NTFS.  
+- Funktionen wie Verschlüsselung, schnellere Zugriffszeiten und Sicherheit sind integriert.  
+- Linux-Distributionen verwenden verschiedene Dateisysteme, Standard ist EXT4.  
+- Dateien können je nach Dateisystem nicht problemlos zwischen Systemen verschoben werden.  
+- Daten werden in Form von Datenblöcken auf die Festplatte geschrieben.  
+- Daten können in viele Teile zerlegt und an verschiedenen Stellen gespeichert werden (Blockspeicherung).  
+- Blockspeicherung ermöglicht schnelleren Zugriff und bessere Nutzung des Speicherplatzes.  
+
+**Dateierweiterung (File Extension):**  
+Anhänsel am Dateinamen, das den Dateityp anzeigt.
+
+---
+
+## Prozessverwaltung
+
+- Ein Prozess ist ein Programm, das ausgeführt wird (z.B. Internet-Browser oder Texteditor).  
+- Ein Programm (z.B. Chrome) kann viele Prozesse haben (Tabs).  
+- Programme benötigen Ressourcen wie RAM und CPU, die begrenzt sind.  
+- Der Kernel verwaltet die Zuteilung dieser Ressourcen effizient.  
+- CPU führt Prozesse nacheinander in sehr kurzen Zeitschlitzen aus, was den Eindruck von gleichzeitiger Ausführung erzeugt.  
+- Der Kernel plant Prozesse, legt sie an und beendet sie, um Ressourcen wieder freizugeben.
+
+---
+
+## Speichermanagement und virtueller Speicher
+
+- Prozesse benötigen Speicherplatz zum schnellen Laden und Ausführen.  
+- RAM ist begrenzt, Festplatte größer aber langsamer.  
+- Virtueller Speicher kombiniert Festplattenspeicher und RAM, um mehr Speicher zu simulieren.  
+- Anwendungen laden nur die gerade benötigten Teile (vergleichbar mit Rezeptseiten im Kochbuch).  
+- Speicher auf der Festplatte, der als virtueller Speicher dient, heißt Swap-Speicher.
+
+---
+
+## I/O-Management
+
+- I/O umfasst Datenübertragung zwischen Geräten und deren Kommunikation untereinander.  
+- Der Kernel steuert diese Kommunikation, optimiert Übertragungen und kontrolliert Fehler.  
+- Mangel an Hardware-Ressourcen (RAM, CPU, I/O-Kapazität) führt oft zu Leistungseinbußen.  
+- Überlastete Eingaben oder Ausgaben können andere Datenübertragungen behindern.
+
+---
+
+## Userspace (Benutzerbereich)
+
+- Interaktion mit dem Betriebssystem erfolgt über eine Shell (Texteingabe) oder grafische Benutzeroberfläche (GUI).  
+- Es gibt verschiedene Shells, die gebräuchlichste unter Linux ist Bash (Bourne-again shell).  
+- Einige Systemtests oder Operationen erfolgen nur über Befehle in der Shell.
+
+---
+
+## Protokolle (Logs)
+
+- Logs sind Dateien, die Systemereignisse wie ein Tagebuch erfassen.  
+- Alle Betriebssysteme führen Protokolle, um Fehler und Aktivitäten zu dokumentieren.
+
+---
+
+## Boot-Vorgang
+
+*(Details zum Boot-Vorgang können hier ergänzt werden.)*
+
+---
+
+## Virtual Machines
+
+- Virtuelle Maschinen (VMs) sind Kopien realer Computer.  
+- Man kann sie nutzen, um z.B. Linux auf einem Windows-Rechner ohne Dual-Boot zu installieren (z.B. VirtualBox).  
+- VMs teilen physische Ressourcen (CPU, Speicher, Datenspeicher), laufen aber isoliert voneinander.  
+- Mehrere Betriebssysteme können gleichzeitig betrieben werden.  
+- VMs sind leichter zu warten, Ressourcen können freigegeben werden.  
+- Ideal, um Software für ein spezielles Betriebssystem zu nutzen und die VM nach Gebrauch wieder zu löschen.
+
+---
+
+## Windows 10 installieren
+
+- BIOS- oder UEFI-Boot-Reihenfolge auf USB-Laufwerk einstellen.  
+- Zugang zum BIOS z.B. über Taste „F12“ beim Start (herstellerabhängig).  
+- Installationsart auswählen (z.B. „Benutzerdefiniert“).  
+- Ziel-Laufwerk für die Installation auswählen.
+
+---
+
+## Linux installieren
+
+- Es gibt unterschiedliche Distributionen, häufigste: Ubuntu.  
+- Über Shell lassen sich Dateien und Ordner anlegen:  
+  - Terminal öffnen  
+  - `echo $SHELL` (zeigt genutzte Shell, z.B. Bash)  
+  - `touch my_super_cool_File` (Datei erstellen)  
+  - `mkdir NAME` (Ordner erstellen)
+
+---
+
+## Qwiklabs
+
+- Qwiklabs ist eine Online-Lernumgebung mit praxisnahen Szenarien.
+
+---
+
+## Grenzen des Internets
+
+- Es gibt verschiedene IP-Versionen: IPv4 (32 Bit) und IPv6 (128 Bit).  
+- IPv4-Adressen sind z.B. 73.55.242.3.  
+- IPv6 löst das Adressproblem (mehr Geräte als IPv4-Adressen) mit längeren Adressen.  
+- NAT (Network Address Translation) ermöglicht mehreren Geräten in einem Netzwerk die Nutzung einer öffentlichen IP.
+
+---
+
+## Software
+
+- Hardware sind physische Geräte, Software sind immaterielle Anweisungen, die Hardware steuern.  
+- Coding: Übersetzung einer Sprache in eine andere.  
+- Scripting: Schreiben von Programmen für einzelne oder begrenzte Aufgaben.  
+- Programmiersprachen erlauben Entwicklern, Anweisungen für Computer zu schreiben.  
+- Softwarearten:  
+  - Application Software (z.B. Grafiksoftware)  
+  - System Software (Basis für Betriebssystem)  
+- Firmware: dauerhaft auf Hardware gespeicherte Software.  
+- Assembly Language: menschenlesbare Zwischensprache, nahe am Maschinencode.  
+- Compiled Languages: werden vor der Ausführung in Maschinencode übersetzt (Compiler).  
+- Interpreted Languages: werden zur Laufzeit übersetzt (Interpreter).  
+- Skripte sind Dateien in interpretierten Sprachen.
+
+---
+
+## Softwaremanagement
+
+- Veraltete Software ist ein Sicherheitsrisiko.  
+- Bugs sind Fehler im Programmcode, die zu unerwarteten Ergebnissen führen.  
+- Software muss regelmäßig aktualisiert werden.  
+- Linux-Befehle zur Softwareverwaltung:  
+  - `sudo apt install git` (Installation mit Berechtigung)  
+  - `dpkg -s gimp` (Prüfen, ob Programm installiert ist)  
+  - `sudo apt-get install -f` (Reparatur beschädigter Pakete)
+
+---
+
+## Netzwerk-Grundlagen
+
+- Das Internet ist ein weltweites Netzwerk aus Computern und Kabeln.  
+- Das Web ist die Informationsschicht, die im Internet ausgetauscht wird.  
+- Networking ist Verwaltung, Installation und Planung von Netzwerken.  
+- Server sind spezielle Computer, die Webseiten und Dienste hosten.  
+- Clients sind Geräte, die auf diese Dienste zugreifen.  
+- Internetanbieter (ISP) verwalten Netzwerke und verbinden diese untereinander.  
+- Geräte haben IP-Adressen (Identifikator, z.B. 100.1.4.3) und MAC-Adressen (Hardware-ID).  
+- Daten werden in Paketen (Bits) übertragen und am Ziel wieder zusammengesetzt.
+
+---
+
+## Netzwerkhardware
+
+- Router verbinden Geräte und leiten Netzwerktraffic.  
+- Pakete passieren viele Router, Switches und Hubs auf ihrem Weg.  
+- Switches sind wie Poststellen im Gebäude, leiten Pakete gezielt weiter.  
+- Hubs senden Daten an alle Geräte (Broadcast).
+
+---
+
+## TCP/IP
+
+- Netzwerkprotokolle sind Regeln für die Datenübertragung.  
+- Sie sorgen für effiziente, sichere und fehlerfreie Kommunikation.  
+- Wichtigste Protokolle: TCP (Zuverlässigkeit) und IP (Routing).  
+- TCP/IP ist Grundlage des Internets.
+
+---
+
+## Das Internet
+
+- Webseiten sind meist HTML-Dateien, die Browser darstellen.  
+- URL (Uniform Resource Locator) ist die Adresse im Web.  
+- www steht für World Wide Web, Domain-Namen sind weltweit einzigartig.  
+- Domain-Endungen (z.B. .com, .de) geben Hinweise auf die Art der Seite.  
+- DNS (Domain Name System) übersetzt Domain-Namen in IP-Adressen.  
+- Ohne DNS müsste man IP-Adressen direkt eingeben.
+
+---
+# TCP/IP-Fünf-Schichten-Netzwerkmodell
+
+## 1. Physical Layer (Bitübertragungsschicht)
+- Verantwortlich für physische Geräte und Medien (Kabel, Stecker).
+- Spezifikationen für Netzwerkkabel, Steckertypen und Signalübertragung.
+- Beispielgerät: **Hub** (sendet Daten an alle Geräte gleichzeitig).
+
+## 2. Data Link Layer (Netzwerkschnittstelle)
+- Regelt Protokolle für Kommunikation über das physische Medium.
+- Definiert Verkabelung, Stecker und Signale.
+- Bekanntestes Protokoll: **Ethernet**.
+- Beispielgerät: **Switch** (leitet Daten gezielt weiter basierend auf MAC-Adressen).
+
+## 3. Network Layer (Internet-Schicht)
+- Ermöglicht Kommunikation zwischen verschiedenen Netzwerken mittels **Routern**.
+- Kernprotokoll: **IP (Internet Protocol)**.
+- Router verbinden lokale Netzwerke mit dem Internet und leiten Daten weiter.
+- Router verwenden **BGP** (Border Gateway Protocol) zur Wegfindung.
+
+## 4. Transport Layer
+- Steuert, welche Anwendungen auf Sender- und Empfängerseite Daten erhalten.
+- Hauptprotokolle: **TCP** (verbindungsorientiert) und **UDP** (verbindungslos).
+- Multiplexing/Demultiplexing über **Ports**.
+
+## 5. Application Layer
+- Vielzahl an anwendungsspezifischen Protokollen (z.B. HTTP, SMTP).
+- Ermöglicht Dienste wie Websurfen, E-Mail usw.
+
+---
+
+# Wichtige Begriffe und Konzepte
+
+### Ethernet & MAC-Adressen
+- MAC-Adresse: 6 Oktette,  
+  - Erste 3 Oktette = OUI (Herstellerkennung),  
+  - Letzte 3 Oktette = Gerätekennung.
+- CSMA/CD regelt den Zugriff auf das Medium.
+- MAC-Adressen sorgen für eindeutige Geräteidentifikation auf Data Link Layer.
+
+### Ethernet-Frame Aufbau
+- Präambel: Synchronisation der Übertragung.
+- Ziel- und Quell-MAC-Adresse.
+- Ether-Type: Protokolltyp (z.B. IP).
+- Payload: Nutzdaten (z.B. IP-Datagramme).
+- Frame Check Sequence (CRC) zur Fehlererkennung.
+
+### IPv4-Adressen
+- 32-Bit-Adresse, bestehend aus Netzwerk-ID und Host-ID.
+- Dynamische Zuweisung via DHCP oder statische Konfiguration.
+- Unterteilung in Klassen (A, B, C, D, E) nach Host-ID-Länge.
+
+### IPv4-Datagramm (IP-Paket)
+- Enthält Header-Felder wie Version, Header-Länge, Diensttyp, Gesamtlänge.
+- Fragmentierung möglich bei Überschreitung der maximalen Paketgröße.
+- TTL-Feld (Time To Live) begrenzt die Lebensdauer des Pakets.
+- Protocol-Feld zeigt das Transportprotokoll (z.B. TCP, UDP).
+
+### Address Resolution Protocol (ARP)
+- Übersetzt IP-Adressen in MAC-Adressen.
+- Geräte speichern ARP-Tabellen lokal, um wiederholte Anfragen zu vermeiden.
+
+### Subnetting & CIDR
+- Subnetze teilen große Netzwerke in kleinere Segmente mit eigenen Gateways.
+- CIDR (Classless Inter-Domain Routing) kombiniert Netzwerk- und Subnetz-ID.
+- Ermöglicht flexiblere Adressvergabe und effizientes Routing.
+
+### Routing
+- Router leiten Datenpakete basierend auf Zieladressen weiter.
+- Interior Gateway Protocols (IGP) für Routing innerhalb eines autonomen Systems.
+- Exterior Gateway Protocols (EGP) für Routing zwischen autonomen Systemen.
+- BGP ist das wichtigste EGP im Internet.
+
+### Transportschicht: TCP
+- TCP sorgt für zuverlässige, verbindungsorientierte Datenübertragung.
+- Verwendet Sequenznummern, Bestätigungen (ACKs) und Fenstersteuerung.
+- Ermöglicht Multiplexing über Quell- und Zielports.
+
+---
+
+# Geräteübersicht
+- **Hub:** Physical Layer Device, sendet Daten an alle angeschlossenen Geräte.
+- **Switch:** Data Link Layer Device, leitet gezielt Daten basierend auf MAC-Adressen.
+- **Router:** Network Layer Device, verbindet Netzwerke und leitet Daten an ISPs weiter.
+
+---
+# TCP Flags
+
+- **ACK (Acknowledged)**: Wert „1“ bedeutet, dass das Feld mit der Bestätigungsnummer geprüft werden soll.
+- **PSH (Push)**: Signalisiert, dass das empfangende Gerät die zwischengespeicherten Daten sofort an die Anwendung weitergeben soll.  
+  Ein Buffer speichert Daten temporär, um große Datenmengen effizienter zu versenden.  
+  Das Push-Flag sorgt dafür, dass auch kleine, wichtige Datenblöcke sofort verarbeitet werden.
+- **RST (Reset)**: Signalisiert, dass eine Verbindung nach fehlenden oder fehlerhaften Segmenten nicht wiederhergestellt werden konnte – „Bitte erneut senden“.
+- **SYN (Synchronize)**: Wird beim Verbindungsaufbau verwendet, um die Sequenznummer zu synchronisieren.
+- **FIN (Finish)**: Signalisiert, dass keine weiteren Daten gesendet werden und die Verbindung geschlossen werden kann.
+
+---
+
+# TCP-Verbindungsaufbau und -abbau
+
+- **Drei-Wege-Handshake:**  
+  1. SYN senden  
+  2. SYN-ACK empfangen  
+  3. ACK senden  
+  -> Verbindung wird hergestellt.
+- **Vier-Wege-Handshake zum Verbindungsabbau:**  
+  Ein Computer sendet FIN, der andere bestätigt mit ACK, danach schickt auch er FIN, der erste bestätigt mit ACK.
+
+---
+
+# Socket-Zustände
+
+- **Socket:** Software-Objekt für einen Netzwerk-Endpunkt (IP + Port).  
+  Nur offene Sockets auf einem Port reagieren auf eingehenden Traffic.
+
+**Zustände:**
+- **LISTEN:** Serverseitig, wartet auf eingehende Verbindungen.
+- **SYN_SENT:** Clientseitig, SYN gesendet, Verbindung noch nicht hergestellt.
+- **SYN_RECEIVED:** Serverseitig, SYN empfangen und SYN-ACK gesendet, finaler ACK fehlt noch.
+- **ESTABLISHED:** Verbindung besteht, Datenübertragung möglich (Server & Client).
+- **FIN_WAIT:** FIN gesendet, aber ACK noch ausstehend.
+- **CLOSE_WAIT:** Verbindung geschlossen, aber Anwendung hält Socket noch.
+- **CLOSED:** Verbindung komplett beendet.
+
+TCP ist verbindungsorientiert, bestätigt jedes gesendete Segment zuverlässig.  
+UDP dagegen ist verbindungslos und sendet ohne Bestätigung (z.B. bei Videostreaming).
+
+---
+
+# Firewalls
+
+- Firewalls arbeiten auf verschiedenen Netzwerkschichten (IP, Transport, Anwendung).  
+- Meist kontrollieren sie in der Transportschicht den Zugriff auf bestimmte Ports, indem sie Traffic blockieren oder erlauben.
+
+---
+
+# Anwendungsschicht
+
+- Vielzahl an Protokollen, z.B. HTTP für Webtraffic.  
+- Webbrowser (Client) kommunizieren mit Webservern (z.B. IIS, Apache, NGINX) über standardisierte Protokolle.
+
+---
+
+# Zusammenarbeit der Schichten (Beispiel TCP-Segment über Netzwerke)
+
+1. Computer 1 erstellt TCP-Segment (z.B. Port 80 mit SYN).
+2. Verpackt in IP-Paket (Quell- und Ziel-IP).
+3. Verpackt in Ethernet-Frame (Quell- und Ziel-MAC).
+4. Sendet Frame an Router A (Gateway).
+5. Router A ersetzt Ethernet-Frame, prüft IP, reduziert TTL, passt Prüfsumme an, sendet weiter.
+6. Router B macht das Gleiche, erkennt Ziel-IP im eigenen Netzwerk.
+7. Router B sendet Frame an Computer 2.
+8. Computer 2 entpackt Frame, prüft TCP-Port, übergibt Daten an Webserver (z.B. Apache).
+
+**Wichtig:**  
+Jeder Router ändert die MAC-Adressen im Ethernet-Frame, das IP-Paket bleibt fast unverändert außer TTL und Prüfsumme.  
+Nur der Zielcomputer entfernt TCP-Kapselung.
+
+---
+
+# DNS (Domain Name System)
+
+- DNS wandelt Domainnamen in IP-Adressen um (Namensauflösung).  
+- Erleichtert Nutzern die Nutzung von Websites und ermöglicht administrative Änderungen ohne Nutzerbeeinflussung.
+- DNS-Auflösung: Client → Caching-Nameserver → Root-Nameserver → TLD-Nameserver → autoritativer Nameserver.
+- DNS nutzt UDP (meistens) für Anfragen, da Anfragen und Antworten klein sind.
+- DNS-Resolver fragt erneut nach, falls keine Antwort kommt.
+
+**Typen von DNS-Servern:**
+- Caching-Nameserver  
+- Rekursive Nameserver  
+- Root-Nameserver (13 Instanzen weltweit, meist Anycast)  
+- TLD-Nameserver (z.B. für „.com“)  
+- Autoritative Nameserver
+
+---
+
+# DNS Ressourceneintragstypen
+
+- **A-Record:** Verknüpft Domain mit IPv4-Adresse.  
+- **AAAA-Record:** Verknüpft Domain mit IPv6-Adresse.  
+- **CNAME:** Leitet Traffic von einer Domain zu einer anderen weiter.  
+- **MX (Mail Exchange):** Definiert Mailserver für eine Domain.  
+- **SRV (Service Record):** Gibt Speicherort bestimmter Dienste an.  
+- **TXT:** Zusätzliche Informationen, z.B. für Email-Dienste.
+
+---
+
+# DNS-Zonen
+
+- DNS-Zonen strukturieren Domains für bessere Verwaltung (z.B. Länder-Subdomains).  
+- SOA-Eintrag gibt die Zone und zuständigen Nameserver an.
+
+---
+
+# DHCP (Dynamic Host Configuration Protocol)
+
+- Automatisiert die Konfiguration von Netzwerkgeräten (IP, Subnetzmaske, Gateway, DNS).  
+- DHCP-Client fragt DHCP-Server, der IP-Adresse und Konfigurationsdaten zuweist.
+
+**DHCP Ablauf:**
+1. **DHCP Discover:** Client sendet Broadcast, um DHCP-Server zu finden.  
+2. **DHCP Offer:** Server bietet IP-Adresse an.  
+3. **DHCP Request:** Client bestätigt gewünschte IP.  
+4. **DHCP ACK:** Server bestätigt Zuweisung.
+
+- DHCP kann dynamische, automatische oder feste IP-Zuweisungen verwalten.  
+- Feste Zuweisung ordnet IP-Adressen anhand von MAC-Adressen zu (Sicherheitsmaßnahme).  
+- DHCP kann auch weitere Konfigurationsparameter wie NTP-Server übermitteln.
+
+---
+
+# Grundlagen der Netzwerktechnologien
+
+## Die grundlegenden Prinzipien von NAT
+
+- NAT (Network Address Translation) ist eine Methode, keine feste Protokollnorm.
+- Übersetzt eine IP-Adresse in eine andere, meist durch Router oder Firewalls.
+- Ermöglicht mehreren Geräten mit privaten IP-Adressen, über eine gemeinsame öffentliche IP ins Internet zu gehen („versteckt“ interne IPs).
+- Router ändert Quell-IP im ausgehenden IP-Datagramm, speichert die ursprüngliche IP für spätere Zuordnung.
+- NAT sorgt für Sicherheit durch IP-Masquerading („1:n NAT“), indem interne IPs außerhalb des Netzwerks verborgen bleiben.
+
+## NAT und die Transportschicht
+
+- Router nutzt Port Preservation, um Antworten korrekt an interne Hosts weiterzuleiten (gleicher Quellport bleibt erhalten).
+- Quellports für ausgehende Verbindungen stammen aus kurzlebigen Ports (49.152–65.535).
+- Portweiterleitung ermöglicht, dass eingehende Anfragen an spezifische interne Server weitergeleitet werden (z.B. Webserver Port 80).
+- Ermöglicht den Betrieb mehrerer Dienste (z.B. Web- und Mailserver) hinter derselben öffentlichen IP.
+
+## Virtuelle private Netzwerke (VPN)
+
+- VPN verbindet private Netzwerke oder Hosts über öffentliche Netzwerke sicher.
+- VPN erzeugt Tunnel und virtuelle Schnittstellen, die Zugriff auf interne Netzwerke ermöglichen.
+- VPN ist ein technisches Konzept, kein festes Protokoll.
+- Ermöglicht entfernten Nutzern (z.B. Homeoffice) Zugang zu Firmennetzwerken.
+
+## Proxy-Dienste
+
+- Proxys sitzen zwischen Client und Server, bieten Vorteile wie Anonymität, Sicherheit, Inhaltsfilterung, und Performance.
+- Webproxies können z.B. Zugriffe auf Webseiten blockieren (z.B. Twitter in Firmen).
+- Reverse-Proxys verteilen Last auf mehrere Server (Load Balancing) und übernehmen oft Verschlüsselungsaufgaben.
+
+## Digital Subscriber Lines (DSL) und Breitbandkabel
+
+- DSL nutzt bestehende Kupfer-Telefonleitungen für schnelle, dauerhafte Internetverbindungen.
+- Varianten: ADSL (schneller Download als Upload), SDSL (gleich schnell).
+- Breitbandkabel (Koaxialkabel) nutzen Frequenzbereiche für Internet neben Fernsehen.
+- CMTS verbindet Kabelanschlüsse mit dem Internetanbieter-Kernnetz.
+
+## Glasfaser
+
+- Glasfaser ist Kerntechnologie für Internet wegen hoher Geschwindigkeit und großer Reichweite.
+- Übertragung erfolgt mit Licht, nicht elektrischen Signalen.
+- FTTH/FTTB (Fiber to the Home/Building) bezeichnet Glasfaser bis zum Kunden.
+- ONT wandelt Glasfasersignale in Kupfer-Netzwerk-Signale um.
+
+## Wide Area Network (WAN)
+
+- Kleine Firmen nutzen nicht-routbaren Adressraum, NAT, DHCP, DNS und Internetzugang.
+- Wachstum erfordert VPN für entfernten Zugriff von Mitarbeitern.
+- WAN verbindet mehrere Standorte über Internetanbieter, wirkt wie ein einzelnes Netzwerk.
+- Teilnehmeranschlussleitung verbindet Standort mit Anbieter.
+- SD-WAN: Softwarebasierte WAN-Lösung, günstiger und flexibel.
+- Alternative: Point-to-Point-VPNs für sichere Standortverbindungen.
+
+## Einstieg ins drahtlose Netzwerk (WLAN)
+
+- WLAN basiert auf IEEE 802.11-Standards, nutzt Funkfrequenzen (2,4 GHz und 5 GHz).
+- 802.11-Frame enthält Kontrollfelder, vier Adressfelder (inkl. Quelle, Ziel, Empfänger, Überträger), Payload und Prüfsumme.
+- Access Points verbinden drahtlose Geräte mit kabelgebundenem Netzwerk.
+
+## Konfiguration drahtloser Netzwerke
+
+- Ad-hoc-Netzwerke: Geräte kommunizieren direkt ohne Infrastruktur.
+- WLANs: Drahtlose Geräte verbinden sich über Access Points mit LAN.
+- Mesh-Netzwerke: Kombination aus Ad-hoc und WLAN, meist drahtlos verbunden, aber mit Kabelanbindung.
+- Access Points leiten Traffic an Gateway-Router weiter.
+
+## WLAN-Kanäle
+
+- Kanäle sind Teilbereiche des Frequenzbands, wichtig zur Vermeidung von Kollisionen.
+- Kanäle können sich überschneiden; z.B. bei 802.11b sind nur Kanäle 1, 6 und 11 überlappungsfrei.
+- Moderne Access Points wählen Kanäle automatisch oder passen sie dynamisch an.
+- Kanalüberschneidungen mit Nachbarn sollten vermieden werden.
+
+---
+
+# WLAN Sicherheit
+
+- Kabelgebundene Datenübertragung: Daten sind teilweise automatisch geschützt  
+  → Nur die zwei Knoten an den Link-Enden kennen die übertragenen Daten  
+- WLAN:  
+  - WEP = „Wired Equivalent Privacy“ (Schutz wie bei Verkabelung)  
+  - Sehr geringes Schutzniveau, nicht sicherer als unverschlüsselte kabelgebundene Verbindung  
+  - Schlüsselgröße spiegelt Sicherheit wider  
+  - WEP verwendet 40-Bit-Schlüssel → kann in Minuten geknackt werden  
+  - Wurde fast überall durch WPA („WiFi Protected Access“) ersetzt  
+  - WPA verschlüsselt mit 128 Bit → deutlich schwerer zu knacken als WEP  
+  - WPA2 ist aktueller Standard, verschlüsselt mit 256 Bit  
+- MAC-Filtering:  
+  - Zugangspunkte erlauben Verbindungen nur von bestimmten MAC-Adressen  
+  - Verbessert Verschlüsselung nicht, schafft aber zusätzliche Barriere gegen unbefugte Geräte  
+
+# Einstieg in die Fehlerbehebung
+
+- Fehlererkennung: Fähigkeit eines Protokolls/Programms, Fehler zu erkennen  
+- Fehlerbehebung: Fähigkeit, Fehler zu beheben bzw. zu umgehen  
+
+# Internet Control Message Protocol (ICMP)
+
+- Verwendet von Routern/Remote-Hosts, um Fehler zurück zum Sender zu melden  
+- ICMP-Paket:  
+  - Header mit Feldern und Datenabschnitt  
+  - Typfeld (8 Bit): Art der Nachricht (z. B. Ziel nicht erreichbar, Zeit überschritten)  
+  - Code-Feld: genauere Ursache der Nachricht  
+  - 16-Bit-Prüfsumme  
+  - Restlicher Header (32 Bit)  
+  - Nutzlast: enthält den IP-Header und die ersten 8 Bytes des fehlerhaften Pakets  
+- ICMP wurde für automatische Kommunikation, nicht für Menschen, entwickelt  
+- Ping: spezieller ICMP-Typ (Echo-Anfrage), fragt „Hallo, bist du da?“  
+  - Antwort: Echo-Antwort, wenn Ziel erreichbar ist  
+  - Ping-Befehl: von Kommandozeile, zeigt Antwortzeit, TTL und Größe  
+
+# Traceroute
+
+- Tool zur Identifikation, wo in Routerkette Probleme auftreten  
+- Sendet Pakete mit steigender TTL (1, 2, 3, …)  
+- Wenn TTL 0, Paket verworfen, ICMP-Zeitüberschreitung wird zurückgeschickt  
+- Sendet für jeden Hop 3 Pakete  
+- Windows Befehl: `tracert` (nutzt ICMP-Echo-Anfragen)  
+- Ähnliche Tools: mtr (Linux/macOS), pathping (Windows)  
+
+# Portverbindung testen
+
+- Netcat (Linux/macOS):  
+  - Befehl `nc [Host] [Port]` versucht Verbindung  
+  - `-z` Flag: nur Portstatus prüfen (Null-I/O-Modus)  
+  - `-v` Flag: ausführliche Ausgabe (verbose)  
+- Windows:  
+  - Test-NetConnection mit `-Port` Flag für Port-Check  
+
+# Tools zur Namensauflösung
+
+- `nslookup [Domain]`: gibt IP-Adresse (A-Eintrag) zurück  
+- Interaktiver Modus: `nslookup` ohne Parameter starten  
+- `server [Adresse]`: DNS-Server ändern  
+- `set type=[Ressourceneintrag]`: DNS-Eintragstyp festlegen  
+- `set debug`: detaillierte Debug-Ausgabe  
+
+# Öffentliche DNS-Server
+
+- Meist genutzte Nameserver ermöglichen Kommunikation ins Internet  
+- Firmen betreiben oft eigene DNS-Server für interne Hostnamen  
+- Öffentliche DNS-Server:  
+  - Beispiel Google DNS: 8.8.8.8 und 8.8.4.4  
+- Gefahr: DNS-Anfragen können abgefangen und manipuliert werden  
+
+# DNS-Registrierung und Ablaufdaten
+
+- DNS ist global hierarchisch organisiert, verwaltet von ICANN  
+- Domainnamen müssen weltweit eindeutig sein  
+
+# Was ist eine Cloud
+
+- Cloud Computing = gemeinsame Nutzung von Computerressourcen  
+- Hardware-Virtualisierung abstrahiert physischen Rechner zu virtuellen Maschinen  
+- Hypervisor verwaltet virtuelle Maschinen  
+- Cloud: riesiger Rechnercluster, Ressourcen werden geteilt  
+- Beispiel: 4 Server (Mail, DNS, Finanzen, Backup) können als virtuelle Maschinen laufen  
+- Public Cloud, Private Cloud, Hybrid Cloud (Mischform)  
+
+# Cloud-Modelle „X as a Service“
+
+- Infrastructure as a Service (IaaS): keine eigene Hardware nötig  
+- Platform as a Service (PaaS): Plattform für Anwendungen bereitgestellt  
+- Software as a Service (SaaS): gehostete Software-Nutzung, z. B. Gmail  
+- Unternehmensnetzwerke dienen hauptsächlich als Internetzugang  
+
+# IPv6-Adressen und Subnetze
+
+- Loopback-Adresse: ::1 (31 Nullen + 1)  
+- FF00:: → Multicast-Adressen  
+- FE80:: → Link-Local-Unicast (basierend auf MAC-Adresse)  
+- Erste 64 Bit = Netzwerk-ID, zweite 64 Bit = Host-ID  
+- IPv6 bietet größeren Adressraum, einfacheren Header, bessere Leistung  
+- Headerfelder: Version, Traffic Class, Flow Label, Payload Length, Next Header, Hop Limit, Quell- & Zieladresse  
+- IPv6-Adressen sind 128 Bit lang (viermal länger als IPv4)  
+- Optionale Header ausgelagert, können verkettet werden  
+
+# Übergangslösungen IPv4 ↔ IPv6
+
+- IPv4 und IPv6 koexistieren, da nicht alle Geräte IPv6 unterstützen  
+- IPv4-mapped IPv6-Adressen: letzte 32 Bit IPv4-Adresse  
+- IPv6 über IPv4-Tunnel (Tunnelserver kapseln IPv6 in IPv4 ein)  
+- Tunnelbroker bieten Tunnel-Endpunkte als Dienst an  
+- Zukunft: vollständiger Umstieg auf IPv6, Tunnel werden überflüssig  
+
+# Betriebssysteme / Windows & Linux
+
+- Dateien und Verzeichnisse sind hierarchisch organisiert  
+- Windows-Pfade: z.B. `C:\Users\Cindy\Desktop`  
+- Laufwerksbuchstaben in Windows: C:, D:, X: (je ein Dateisystem)  
+- Windows verwendet Backslash `\`, Linux verwendet Slash `/` als Pfadtrenner  
+- Verzeichnisauflistung mit `ls` (Linux)  
+
+# Cloud-Datenhaltung
+
+- Kleine Firmen mieten meist Rechenzentrumsteile  
+- Cloud-Dienste speichern Daten in großen Rechenzentren für viele Nutzer  
+- Cloud-Anbieter kümmern sich um Hardware, Sicherheits- und Software-Updates  
+
+---
+
+# Cloud
+
+- Cloud-Alternative zur eigenen Infrastruktur: Infrastructure as a Service (IaaS)
+- IaaS-Anbieter stellen vorkonfigurierte virtuelle Maschinen bereit, wie physische Server
+- Bekannte IaaS-Anbieter: Amazon Web Services (EC2), Linode, Windows Azure, Google Compute Engine
+- Networking as a Service (NaaS) ermöglicht Auslagerung von Netzwerkdiensten (z. B. Netzwerksicherheit, Routing)
+- Software as a Service (SaaS): Software in der Cloud nutzen, z. B. Microsoft Office 365, Google G Suite
+- Platform as a Service (PaaS): Plattform für Entwicklung, Datenbank und Bereitstellung von Webanwendungen
+- Directory as a Service (DaaS): Cloud-basierte Verwaltung von Nutzern, Zugang und Berechtigungen
+
+# Remote-Verbindungen
+
+- Remote-Zugriff für IT-Support: Fehlerbehebung, Dateiübertragung, Terminalemulation
+- Vorteile: Spart Zeit, unterstützt flexible Arbeitsmodelle (Homeoffice, hybrid)
+- Hohe Akzeptanz von Remote- und Hybridarbeit weltweit (Microsoft-Studie: 66 % setzen auf Hybrid)
+- Remote-Zugriffssoftware:
+  - SSH (Secure Shell): Sichere Verbindung, Datenverschlüsselung, Verwaltung von Linux/Unix-Systemen
+  - Remote Monitoring and Management (RMM): Überwachung und Verwaltung von Netzwerken über Agents
+- Remote Desktop Protocol (RDP): Microsoft-Protokoll für Remote-Zugriff auf Windows/Mac-Desktops, verschlüsselt Daten, aber Sicherheitsrisiken (Port 3389, Brute-Force)
+- Virtuelles Privates Netzwerk (VPN): Verschlüsselter Tunnel ins Unternehmensnetzwerk, geeignet für kleine/mittlere Firmen, eingeschränkte Steuerungsmöglichkeiten
+- Drittanbieter-Tools:
+  - Videokonferenzen und Bildschirmfreigabe: Google Meet, Zoom, Microsoft Teams, Skype
+  - Cloud-Speicher und Dateifreigabe: Google Drive, OneDrive, Dropbox als moderne FTP-Alternativen
+
+# FTP, SFTP und TFTP (Dateiübertragungsdienste)
+
+- FTP: Altes, unverschlüsseltes Dateiübertragungsverfahren, heute vor allem für Webinhalte genutzt
+- SFTP: Sichere Version von FTP, verschlüsselt über SSH
+- TFTP: Einfaches, kein Login erforderndes Protokoll, für allgemeine Dateien, z. B. Installationsdateien
+- PXE (Preboot Execution Environment): Booten von Software über Netzwerk, z. B. OS-Installation ohne lokal installierte Software
+
+# Intranet und Proxy-Server
+
+- Intranet: Internes Firmennetzwerk, nur firmenintern zugänglich
+- Proxyserver: Vermittler zwischen Firmennetz und Internet, schützen das Netzwerk, überwachen und blockieren Zugriffe, sorgen für Datenschutz und Sicherheit
+
+# DNS-Server
+
+- Eigener DNS-Server ermöglicht Zuordnung von Computernamen zu IP-Adressen
+- Lokale DNS-Konfiguration zentralisiert Adressierung, ersetzt Standard-DNS des Internetanbieters
+- Tools: lftp (FTP-Client), dnsmasq (DNS, DHCP, TFTP, PXE in einem Paket)
+
+# Verzeichnisserver (Directory Server)
+
+- Verzeichnisserver organisieren und verknüpfen Netzwerkressourcen (Nutzer, Gruppen, Ordner)
+- Zentrale Verwaltung von Nutzerkonten und Computerdaten, ähnlich Dateisystem mit Organisationseinheiten (OEs)
+- LDAP (Lightweight Directory Access Protocol): Netzwerkzugriff auf Verzeichnisdienste (z. B. Active Directory, Open LDAP)
+- Authentifizierungsmethoden: anonym, einfach, SASL (meist mit Kerberos)
+- Kerberos: Protokoll zur sicheren Netzwerkauthentifizierung und Schutz von Anmeldedaten
+
+# Active Directory (AD)
+
+- Zentrale Nutzer- und Rechteverwaltung in Unternehmen
+- Steuert Anmeldung, Zugriffsrechte, Sicherheitsrichtlinien und Benutzerverwaltung
+- Beispielanwendungen:
+  - Anmeldung am Firmen-PC über Domain Controller
+  - Zugriff auf freigegebene Dateien abhängig von Berechtigungen
+  - Neue PCs werden automatisch in Firmenrichtlinien eingebunden („Join Domain“)
+- Aufbau: Domain (Firma), Organisationseinheiten (OU), Benutzer/Computer als Objekte
+- Domain Controller:
+  - Speichert Benutzerdatenbank
+  - Prüft Passwörter
+  - Entscheidet Zugriffsrechte
+  - Synchronisiert Daten über mehrere DCs
+- AD funktioniert dank LDAP auch mit Linux, macOS, Druckern, Cloud-Diensten
+
+---
+
+# Security
+
+## CIA-Triade
+
+- **Confidentiality (Vertraulichkeit)**: Schutz von Daten vor unbefugtem Zugriff (z.B. Passwortsicherung).
+- **Integrity (Integrität)**: Daten bleiben präzise und unverändert während der Übertragung.
+- **Availability (Verfügbarkeit)**: Daten müssen für berechtigte Nutzer jederzeit zugänglich sein, auch bei Systemausfällen.
+
+## Grundbegriffe der Sicherheit
+
+- **Risiko**: Möglichkeit von Verlust oder Angriff.
+- **Schwachstellen**: Mängel im System, die ausgenutzt werden können.
+- **Zero-Day-Schwachstelle**: Fehler, die Entwickler nicht kennen, Angreifer aber schon.
+- **Exploit**: Software, die Schwachstellen ausnutzt.
+- **Bedrohung**: Potenzielle Gefahr, z.B. Angreifer.
+- **Hacker**: Personen, die Systeme angreifen (Black-Hats = böswillig, White-Hats = ethisch).
+- **Angriff**: Tatsächlicher Versuch, Schaden zu verursachen.
+
+## Malware
+
+- Schadsoftware, z.B. Virus, Wurm, Trojaner, Spyware, Ransomware, Rootkit, Backdoor, Botnet.
+- Viren heften sich an Programme, Würmer verbreiten sich selbstständig.
+- Trojaner tarnen sich als legitime Software.
+- Spyware überwacht Nutzer heimlich, Keylogger zeichnen Tastatureingaben auf.
+- Ransomware blockiert Datenzugriff gegen Lösegeld.
+- Bots führen zentral gesteuerte Aufgaben aus; Botnetze sind Netzwerke solcher Bots.
+- Rootkits verbergen sich im System, Backdoors ermöglichen dauerhaften Zugang.
+- Logikbomben aktivieren Schadcode bei bestimmten Bedingungen.
+
+## Netzwerkangriffe
+
+- **DNS-Cache-Poisoning**: Manipulation von DNS-Servern zur Umleitung auf falsche Seiten.
+- **Man-in-the-Middle (MITM)**: Angreifer schaltet sich zwischen zwei Kommunizierende.
+- **Session-Hijacking**: Übernahme aktiver Sitzungen durch Diebstahl von Sitzungstoken.
+- **Gefälschte Zugangspunkte (Evil Twin)**: Böse Netzwerke, die legitime imitieren.
+  
+## Denial of Service (DoS)
+
+- Überlastung von Servern/Diensten, sodass legitime Nutzer blockiert werden.
+- Beispiele: Ping of Death, Ping-Flood, SYN-Flood.
+- **XSS-Angriffe**: Einschleusen von schädlichem Code in Websites (häufig für Session-Hijacking).
+- **SQL-Injection**: Ausführung schädlicher SQL-Befehle auf Datenbanken.
+
+## Passwort-Angriffe
+
+- Einsatz von Tools zum Erraten von Passwörtern (Brute-Force).
+- CAPTCHA kann automatisierte Angriffe verhindern.
+
+## Kryptografie
+
+### Symmetrische Verschlüsselung
+
+- Ein Schlüssel wird zum Ver- und Entschlüsseln verwendet.
+- Wichtig: Schlüssellänge bestimmt Sicherheit.
+- Beispiele: AES (128, 192, 256 Bit Schlüssel), DES (veraltet).
+- Blockchiffren: Verschlüsseln Daten in Blöcken (z.B. AES).
+- Stromchiffren: Verschlüsseln Daten bit- oder byteweise (z.B. RC4).
+- Problem bei Stromchiffren: Wiederverwendung des Schlüsselstroms führt zu Sicherheitslücken.
+- Initialisierungsvektor (IV): Zufallswert zur Erzeugung eines einzigartigen Schlüsselstroms, wird im Klartext mitgesendet.
+- Beispiel WEP (WLAN): Unsicher wegen kurzer IVs und Wiederverwendung → ersetzt durch WPA/WPA2.
+
+### Asymmetrische Verschlüsselung (Public-Key-Kryptografie)
+
+- Zwei Schlüssel: öffentlicher (public) und privater (private).
+- Nachricht verschlüsseln: Mit öffentlichem Schlüssel, nur mit privatem Schlüssel entschlüsselbar.
+- Digitale Signatur: Nachricht mit privatem Schlüssel signieren, Empfänger prüft mit öffentlichem Schlüssel.
+- Beispiel: Suzanne sendet Nachricht an Daryll, verschlüsselt mit Darylls öffentlichem Schlüssel; nur Daryll kann mit privatem Schlüssel entschlüsseln.
+
+---
+
+# Kryptografie Basics
+
+## Öffentlicher und privater Schlüssel
+- **Öffentlicher Schlüssel** = Briefkasten (jeder darf etwas einwerfen)  
+- **Privater Schlüssel** = Briefkastenschlüssel (nur du kannst die Post rausholen)  
+- **Digitale Signatur** = Unterschrift mit deinem Siegel, die nur du erzeugen kannst  
+
+Es gibt auch die Kombination aus beidem: Der geheime Schlüssel wird über asymmetrische Kryptografie sicher übergeben.
+
+---
+
+## Warum kombiniert man asymmetrische und symmetrische Verschlüsselung?
+- Asymmetrische Verschlüsselung ist sicher, aber langsam und rechenintensiv.  
+- Symmetrische Verschlüsselung ist schnell und effizient, besonders bei großen Datenmengen.  
+
+**Kombination:**  
+1. Asymmetrische Verschlüsselung tauscht den symmetrischen Schlüssel sicher aus.  
+2. Symmetrische Verschlüsselung verschlüsselt dann die Nachrichten schnell und effizient.
+
+---
+
+## Was sind MACs (Message Authentication Codes)?
+- MACs sind Prüfsummen, die sicherstellen, dass eine Nachricht vom Absender kommt und unterwegs nicht verändert wurde.  
+- Der gleiche geheime Schlüssel wird zum Erstellen und Prüfen des MAC verwendet (symmetrisch).  
+- So kann man Authentizität und Integrität der Nachricht sicherstellen.
+
+---
+
+## HMAC
+- Sichere Form von MAC, kombiniert einen geheimen Schlüssel mit einer Hash-Funktion (z.B. SHA-1, MD5).  
+- Sender erzeugt aus Nachricht + Schlüssel einen HMAC und schickt ihn mit.  
+- Empfänger erzeugt den HMAC aus Nachricht + Schlüssel erneut und vergleicht beide Werte.
+
+---
+
+## CMAC und CBC-MAC
+- MACs können auch mit symmetrischen Verschlüsselungen wie AES oder DES erzeugt werden (CMAC).  
+- CBC-MAC verschlüsselt die Nachricht blockweise, jeder Block wird mit dem vorherigen verknüpft.  
+- Ergebnis: Ein Wert, der sich bei jeder Änderung der Nachricht ändert – Manipulationen werden erkannt.
+
+---
+
+## Kurz gesagt
+- **Asymmetrisch:** Sicherer Schlüsseltausch  
+- **Symmetrisch:** Schnelle Verschlüsselung großer Datenmengen  
+- **MACs:** Sicherstellung von Echtheit und Unverändertheit  
+- **HMAC:** MAC mit Hash-Funktionen  
+- **CMAC:** MAC mit symmetrischer Verschlüsselung  
+
+---
+
+## Wichtige Verfahren
+
+### RSA
+- Eines der ersten asymmetrischen Verfahren, weit verbreitet.  
+- Nutzt große Primzahlen, geeignet für Verschlüsselung und Signaturen.  
+- Sicher, aber rechenintensiv (Schlüssel z.B. 2048 oder 3072 Bit).
+
+### ✍DSA (Digital Signature Algorithm)
+- Nur für Signaturen, zur Authentizitätsprüfung.  
+- Für jede Signatur wird ein neuer Zufallswert benötigt.  
+- Beispiel: Sony PlayStation 3 nutzte DSA ohne neue Zufallswerte, was zur Kompromittierung des privaten Schlüssels führte.
+
+### Diffie-Hellman (DH)
+- Sicherer Schlüsselaustausch über unsichere Kanäle.  
+- Beide Seiten einigen sich auf eine Zahl, tauschen berechnete Werte aus, und erzeugen so denselben geheimen Schlüssel.  
+- Wird nur für Schlüsselaustausch genutzt, nicht für Verschlüsselung.
+
+### Elliptische-Kurven-Kryptografie (ECC)
+- Nutzt Eigenschaften elliptischer Kurven zur Verschlüsselung.  
+- Genauso sicher wie RSA, aber mit viel kürzeren Schlüsseln (z.B. 256-Bit statt 3072-Bit).  
+- Spart Rechenleistung und Speicher, ideal für Smartphones und Smartcards.  
+- Varianten:  
+  - ECDSA (Signaturen)  
+  - ECDH (Schlüsseltausch)
+
+### Quantencomputer & Zukunft
+- Quantencomputer könnten ECC und andere Verfahren knacken.  
+- Forschung an Post-Quanten-Kryptografie läuft.
+
+---
+
+## Hash-Funktionen
+
+### Was ist eine Hash-Funktion?
+- Rechenregel, die aus beliebigen Daten einen festen Hash-Wert (Digest) erzeugt.  
+- Länge des Hash-Werts ist immer gleich, egal wie lang die Eingabe ist.  
+- Beispiel:  
+  - „Hello World“ → E49A00FF  
+  - „hello world“ → FF1832AE  
+- Kleine Änderungen in der Eingabe führen zu komplett anderen Hash-Werten.
+
+### Wozu werden Hash-Funktionen verwendet?
+- Schnelles Suchen in Datenstrukturen (z.B. Hashtabellen)  
+- Duplikate erkennen  
+- Datenintegrität prüfen  
+- Authentifizierung (z.B. Passwörter)  
+- Digitale Signaturen und Sicherheitsprotokolle  
+
+### Besonderheiten kryptografischer Hash-Funktionen
+- Nicht zum Verschlüsseln, sondern zum Prüfen und Absichern von Daten.  
+- Eigenschaften: Kollisionsresistenz, Einwegfunktion, etc.
+
+---
+
+# Hash-Funktionen & Kryptografie – Kompakt
+
+## Merksatz
+Hash-Funktionen sind digitale Fingerabdrücke für Daten – kurz, eindeutig und nicht zurückverfolgbar.
+
+---
+
+## Was ist Hash-Technologie?
+
+### Was macht eine Hash-Funktion?
+- Nimmt beliebige Daten und erzeugt einen Hash-Wert (digitalen Fingerabdruck)
+- Immer gleich lang, unabhängig von Eingabedaten
+- Eindeutig (im Idealfall)
+- Nicht rückrechenbar (Originaldaten nicht rekonstruierbar)
+
+### Kollision
+- Zwei verschiedene Eingaben erzeugen denselben Hash → gefährlich, z. B. bei digitalen Signaturen
+
+### MD5 & SHA1 – unsicher
+- MD5: Seit 2004 bekannt, dass Kollisionen erzeugbar sind, ab 2010 nicht mehr empfohlen
+- SHA1: Etwas sicherer, aber seit 2017 auch Kollisionen möglich → nicht mehr empfohlen
+
+### Empfohlene Hash-Funktionen heute
+- SHA2 (z. B. SHA-256) und SHA3 gelten als sicher und werden von Regierungen genutzt
+
+---
+
+## MIC vs. MAC
+- **MIC (Message Integrity Check):** Prüft nur Datenintegrität, kein Schlüssel → kein Schutz gegen gezielte Manipulation  
+- **MAC (Message Authentication Code):** Nutzt geheimen Schlüssel → schützt Integrität + Authentizität
+
+---
+
+## Passwort-Speicherung & Angriffe
+
+### Warum keine Klartext-Passwörter speichern?
+- Datenbank-Leak = direkte Angriffsfläche  
+- Stattdessen: Passwort hashen (z. B. SHA-256) und Hash speichern
+
+### Angriffe auf Hashes
+1. **Brute-Force:** Probieren aller Passwörter bis Passender gefunden  
+2. **Rainbow Tables:** Vorgefertigte Tabellen mit Passwörtern und Hashes (kein Rechnen nötig, großer Speicherbedarf)
+
+### Schutz mit Salts
+- Zufällige Zusatzdaten vor dem Hashen anhängen → verhindert Rainbow-Table-Angriffe  
+- Beispiel: Passwort + Salt → Hash wird berechnet  
+- Salt muss geheim & lang sein (z. B. 128 Bit)
+
+### Fazit Passwortschutz
+- Nie Klartext speichern  
+- Sichere Hashes verwenden (SHA-256, bcrypt, Argon2)  
+- Salts nutzen  
+- Mehrfaches Hashing (z. B. 10.000x) erhöhen Sicherheit
+
+---
+
+## Public-Key-Infrastruktur (PKI)
+
+### Was ist PKI?
+- System zur Verwaltung digitaler Zertifikate & öffentlicher Schlüssel  
+- Ermöglicht sichere digitale Kommunikation
+
+### Digitale Zertifikate
+- Enthalten öffentlichen Schlüssel + Besitzerinfos  
+- Signiert von vertrauenswürdiger Zertifizierungsstelle (CA)
+
+### Wichtige Rollen
+- CA (Zertifizierungsstelle): Stellt Zertifikate aus & signiert sie  
+- RA (Registrierungsstelle): Prüft Identität der Antragsteller  
+- Repository: Speichert & verwaltet Zertifikate
+
+### Zertifikatstypen
+- SSL/TLS-Serverzertifikate, Wildcard-Zertifikate, Selbstsignierte Zertifikate, Client-Zertifikate, Code-Signing-Zertifikate
+
+### Vertrauenskette
+- Root-CA → Intermediate CAs → Endnutzerzertifikate  
+- Root-CAs sind in Betriebssystemen/Browserspeichern vorinstalliert
+
+---
+
+## X.509-Zertifikate
+- Standard für digitale Zertifikate (Version 3 aktuell)  
+- Enthalten: Seriennummer, Aussteller, Gültigkeit, Besitzer, öffentlicher Schlüssel, Signatur  
+- Verwaltung ungültiger Zertifikate über CRL (Certificate Revocation List)
+
+---
+
+## Web of Trust
+- Dezentrales Vertrauensnetzwerk (statt zentraler CA)  
+- Nutzer signieren gegenseitig ihre Schlüssel, z. B. bei Keysigning-Partys
+
+---
+
+## Sichere Kommunikation: HTTPS, TLS, SSH, PGP
+
+### HTTPS & TLS
+- HTTPS = HTTP über TLS (früher SSL) → Verschlüsselung für Webverkehr  
+- TLS schützt: Verschlüsselung, Authentifizierung, Integrität  
+- TLS-Handshake: Aushandlung sicherer Sitzungsschlüssel  
+- Forward Secrecy schützt vergangene Sitzungen auch bei Schlüsselverlust
+
+### SSH
+- Verschlüsseltes Protokoll für sicheren Fernzugriff  
+- Authentifizierung per Schlüsselpaare (public/private)
+
+### PGP (Pretty Good Privacy)
+- Verschlüsselung & digitale Signatur für E-Mails & Dateien  
+- Nutzt asymmetrische Kryptografie (öffentlich/privat) + symmetrische Verschlüsselung (Hybrid)  
+- Web of Trust statt zentrale CA  
+- Tools: GPG, Enigmail, Mailvelope
+
+---
+
+## Fazit
+- Hashes = digitale Fingerabdrücke, wichtig für Sicherheit  
+- MD5 & SHA1 sind unsicher; SHA2 & SHA3 empfohlen  
+- Passwörter immer gehasht + mit Salt schützen  
+- PKI sichert digitale Kommunikation via Zertifikaten  
+- HTTPS, TLS, SSH & PGP sind essenzielle Protokolle für sichere Datenübertragung
+
+---
+
+# Netzwerktraffic-Schutz
+
+## 1. Warum Verschlüsselung?
+Verschlüsselung schützt Daten während der Übertragung und sorgt für:
+- Vertraulichkeit (niemand kann mitlesen)
+- Integrität (Daten werden nicht verändert)
+- Datenschutz
+
+## 2. Was ist ein VPN?
+Ein Virtuelles Privates Netzwerk (VPN) baut einen sicheren Tunnel durch das Internet und schützt Daten, auch über öffentliche Netzwerke.  
+Einsatzbereiche:
+- Remote-Zugriff auf interne Netzwerke (z. B. Homeoffice)
+- Anonyme Internetnutzung
+- Verschlüsselte Verbindung zwischen zwei Netzwerken (z. B. Unternehmensstandorte)
+
+## 3. VPN-Arten & Protokolle
+
+### IPsec (Internet Protocol Security)
+- Verschlüsselt IP-Pakete
+- Zwei Modi:
+  - Transportmodus: Verschlüsselt nur den Inhalt, nicht den IP-Header
+  - Tunnelmodus: Verschlüsselt das ganze IP-Paket, packt es in ein neues
+- Einsatz z. B. bei Site-to-Site-VPNs
+
+### L2TP (Layer 2 Tunneling Protocol)
+- Nur ein Tunnelprotokoll, kein eigenes VPN
+- Wird mit IPsec kombiniert (L2TP/IPsec) für Sicherheit
+- IPsec verhandelt den sicheren Kanal, dann wird der L2TP-Tunnel darüber aufgebaut
+- Unterschied:
+  - L2TP = Tunnel
+  - IPsec = Sicherheit (Verschlüsselung, Authentifizierung)
+
+### OpenVPN
+- Nutzt SSL/TLS zur Verschlüsselung
+- Basierend auf OpenSSL, unterstützt viele moderne Chiffren
+- Authentifizierung über Pre-Shared Keys, Zertifikate (am sichersten) oder Benutzername + Passwort
+- Läuft über UDP oder TCP (Standardport 1194)
+- Arbeitet im Userspace, was zusätzliche Sicherheit bieten kann
+- Unterstützt bis zu 256-Bit-Verschlüsselung
+
+---
+
+# TPM und IT-Sicherheit
+
+## Wofür braucht man TPM?
+- Schutz interner Systeme (z. B. Cloud-Verbindungen, Remote-Zugriff)
+- Verbindung mehrerer Unternehmensstandorte
+- Erhöhung von Datenschutz und Sicherheit im Netz
+
+## Was ist TPM?
+TPM (Trusted Platform Module) ist ein Hardware-Chip, der kryptografische Schlüssel sicher erzeugt und speichert.  
+Eigenschaften:
+- Eindeutiger, geheime RSA-Schlüssel fest eingebrannt
+- Ermöglicht Hardware-Authentifizierung und Remote Attestation (Nachweis der Systemintegrität)
+- Schutz vor unbefugten Hardware-Änderungen
+
+## Funktionen von TPM
+- **Datenbindung:** Daten sind an das TPM gebunden und nur mit diesem entschlüsselbar
+- **Datenversiegelung:** Daten können nur bei unverändertem Systemzustand entschlüsselt werden
+- TPM gibt es als Chip, Firmware, Software oder virtuell
+
+## Vergleich zu Mobilgeräten
+- Mobile Geräte nutzen ein ähnliches Konzept namens "Secure Element"
+- Erweiterung: Trusted Execution Environment (TEE) – isolierte, sichere Umgebung
+
+## Kritik und Sicherheit
+- Vertrauen in Hersteller notwendig, da Schlüssel eingebrannt sind
+- Angriffe auf TPM sind aufwendig, aber theoretisch möglich
+
+## Anwendung von TPM
+- Schutz der Plattform-Integrität (Hard- und Software)
+- Häufig bei Full Disk Encryption (FDE) eingesetzt (z. B. Microsoft Bitlocker, Apple FileVault 2)
+- Entsperrung der Festplatte nur bei unveränderter Systemkonfiguration
+
+## Wichtiges Konzept: Zufälligkeit
+- Kryptosysteme benötigen echte Zufallszahlen (Entropie) für sichere Schlüssel
+
+---
+
+# Die drei "A"s der IT-Sicherheit
+
+1. **Authentifizierung (authn):** Wer ist der Nutzer? (z. B. Login mit E-Mail + Passwort)  
+2. **Autorisierung (authz):** Was darf der Nutzer tun? (Zugriffsrechte nach erfolgreicher Authentifizierung)  
+3. **Accounting:** Wer hat was gemacht? (Protokollierung von Zugriffen für Kontrolle und Audits)  
+
+---
+
+# Multi-Faktor-Authentifizierung (MFA)
+
+## Definition
+Mehrere unabhängige Faktoren zur Bestätigung der Nutzeridentität.
+
+## Die drei Arten von Faktoren
+- Wissen (Passwort, PIN)
+- Besitz (Token, Smartphone)
+- Biometrie (Fingerabdruck, Iris-Scan)
+
+## Warum MFA sicherer ist
+- Mehrere Faktoren zu stehlen ist schwieriger als nur ein Passwort
+- Kombination z. B. Passwort + physischer Token deutlich sicherer als nur Passwörter
+
+## Beispiele für MFA-Methoden
+- Physische Token (USB-Stick, OTP-Generatoren wie TOTP oder HOTP)
+- Smartphone-Apps (Google Authenticator, Authy)
+- Schwachstelle SMS (unsicher wegen Abhören, SIM-Swapping)
+
+## Risiken & Nachteile
+- Phishing bleibt möglich
+- Physische Token können verloren gehen
+- Zusätzlicher Aufwand für Nutzer
+
+## Fazit
+MFA bietet signifikant mehr Sicherheit, besonders in Kombination mit starken Passwortrichtlinien und Schulungen.
+
+---
+
+# Biometrische Authentifizierung
+
+- Identifikation durch einzigartige physiologische Merkmale (Fingerabdruck, Gesicht, Iris, Stimme)
+- Vorteile: Personengebunden, schwer übertragbar, schnell und bequem
+- Datenschutz: Biometrische Daten werden gehasht, nicht direkt gespeichert
+- Missbrauch kann gravierend sein (z. B. gefälschte Fingerabdrücke)
+- Beispiel: Windows Hello (nutzt Fingerabdruck, Iris, Gesicht mit Tiefensensorik)
+
+---
+
+# Sicherheitsschlüssel (U2F – Universal 2nd Factor)
+
+## Was ist U2F?
+Ein sicherer Zwei-Faktor-Authentifizierungsstandard von FIDO Alliance, Google, Yubico und NXP.
+
+## Funktionsweise
+- Registrierung: Schlüsselpaar wird erzeugt, öffentlicher Schlüssel bei Website gespeichert
+- Authentifizierung: Website sendet Challenge, der Sicherheitsschlüssel signiert diese
+- Website prüft Signatur und bestätigt Zugang
+
+## Vorteile gegenüber OTP
+- Schutz vor Phishing und Replay-Angriffen
+- Hardware nicht klonbar
+- Benutzerfreundlich: nur Klick nötig, kein Code eingeben
+
+## Relevanz für IT-Fachkräfte
+Wissen um MFA-Methoden ist wichtig für Support, Implementierung und Sicherheitsberatung.  
+Biometrie und Sicherheitsschlüssel sind starke Alternativen zu klassischen Passwörtern und OTPs.
+
+---
+
