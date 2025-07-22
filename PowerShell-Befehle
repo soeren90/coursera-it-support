@@ -1,0 +1,101 @@
+# Linux- und PowerShell-Befehle – Übersicht
+
+---
+
+## Linux: Verzeichnisse & Pfade
+
+### Root-Verzeichnis
+- `/` ist das Stammverzeichnis (vergleichbar mit `C:\` unter Windows).
+- Beispielpfad: `/home/cindy/Desktop` ≈ `C:\Users\Cindy\Desktop`
+
+### Wichtige Verzeichnisse unter `/`
+- `/bin` – Wichtige Programme & Binärdateien (z. B. `ls`)
+- `/etc` – Systemkonfigurationsdateien
+- `/home` – Persönliche Nutzerverzeichnisse
+- `/proc` – Infos zu laufenden Prozessen
+- `/usr` – Nutzersoftware
+- `/var` – Log- und temporäre Dateien
+
+---
+
+## `ls` – Verzeichnisinhalte anzeigen
+
+- ls /                # Zeigt Root-Inhalte
+- ls <Pfad>           # Zeigt Inhalte eines Verzeichnisses
+- ls -l               # Lange Liste mit Dateidetails
+- ls -a               # Alle Dateien inkl. versteckter
+- ls -la              # Kombination von -l und -a
+- ls --help           # Übersicht über Optionen
+- man ls              # Detaillierte Manpage
+
+### Verzeichnis wechseln
+
+- cd <Pfad>           # Absolut oder relativ
+- cd ..               # Eine Ebene nach oben
+- cd ..\Desktop       # Kombination
+- cd ~                # Benutzerverzeichnis
+
+### Navigation und Verzeichnisse
+
+- pwd                         # Zeigt aktuelles Verzeichnis
+- cd /home/(bsp.:)cindy/Documents    # Absoluter Pfad
+- cd ../Documents             # Relativer Pfad
+- cd ~/Desktop                # Home-Verzeichnis
+
+---
+
+## Ordner erstellen
+
+- mkdir 'my cool folder'         # Mit einfachen Anführungszeichen
+- mkdir "my cool folder"         # Mit doppelten Anführungszeichen
+- mkdir my\ cool\ folder         # Mit Backslash zur Maskierung
+
+---
+
+## Verlauf anzeigen
+
+- history                        # Zeigt alle Befehle
+
+---
+
+## Shell aufräumen
+
+- clear                          # Löscht Terminalausgabe (nicht den Verlauf)
+
+---
+
+## Dateien und Verzeichnisse kopieren
+
+- cp Datei.txt Zielpfad                      # Datei kopieren
+- cp *.jpg Zielpfad                          # Mehrere Dateien mit Wildcard
+- cp Ordner Zielpfad -Recurse                # Verzeichnis inkl. Inhalt kopieren
+- cp Ordner Zielpfad -Recurse -Verbose       # Mit Ausgabe
+
+## Löschen
+
+- Remove-Item Datei.txt                     # Datei löschen
+- Remove-Item Ordnername                    # Ordner löschen (fragt bei Inhalt)
+- Remove-Item Ordnername -Recurse           # Rekursiv & ohne Nachfrage
+- Remove-Item Datei.txt -Force              # Erzwingt das Löschen
+
+## Verschieben
+
+- Move-Item "alt.txt" "neu.txt"                         # Datei umbenennen
+- Move-Item "neu.txt" "C:\Users\cindy\Documents"        # Datei verschieben
+- Move-Item *.txt "C:\Users\cindy\Documents"            # Mehrere Dateien verschieben
+
+---
+
+## Datei-Inhalte anzeigen
+
+- cat datei.txt                             # Gesamten Inhalt anzeigen
+- more datei.txt                            # Seitenweise Anzeige
+- Get-Content datei.txt -Head 10            # Erste 10 Zeilen
+- Get-Content datei.txt -Tail 10            # Letzte 10 Zeilen
+
+
+
+
+
+
+
