@@ -1292,3 +1292,401 @@ Biometrie und Sicherheitsschlüssel sind starke Alternativen zu klassischen Pass
 
 ---
 
+# Single Sign-on (SSO) - Zusammenfassung
+
+## Was ist SSO?
+Single Sign-on (SSO) ist ein Authentifizierungsverfahren, bei dem sich Nutzer einmalig anmelden, um auf mehrere Dienste zuzugreifen - ohne sich bei jedem Dienst erneut authentifizieren zu müssen.
+
+## Wie funktioniert es?
+- Die Anmeldung erfolgt zentral, z. B. über einen LDAP-Server oder ein Kerberos-System.
+- Nach der Authentifizierung erhält der Nutzer ein Token oder Ticket, mit dem er auf andere Anwendungen zugreifen kann.
+- Beispiel: Kerberos nutzt ein sogenanntes Ticket Granting Ticket (TGT) für diesen Zweck.
+
+## Vorteile
+- Nur ein Satz Anmeldedaten notwendig  
+- Weniger Passwort-Reset-Anfragen  
+- Höhere Benutzerfreundlichkeit und Produktivität
+
+## Sicherheitsrisiken
+- Bei Kompromittierung eines Kontos erhält der Angreifer Zugriff auf viele Dienste gleichzeitig  
+- SSO-Tokens oder -Cookies können gestohlen und missbraucht werden  
+- Multi-Faktor-Authentifizierung (MFA) ist empfohlen, schützt aber nicht vor Session-Token-Diebstahl
+
+## Beispiel: OpenID
+- OpenID ist ein dezentrales SSO-System
+- Websites lagern die Authentifizierung an einen externen Identitätsanbieter aus
+- Nutzer melden sich dort an und erhalten ein Token, das die Authentifizierung gegenüber anderen Diensten bestätigt
+- Vorteil: Keine zusätzliche Registrierung auf jeder unterstützenden Website nötig
+
+---
+
+# OAuth
+
+OAuth ist ein offener Standard zur Autorisierung von Drittanbieter-Apps, ohne dass Nutzer ihre Anmeldedaten direkt weitergeben müssen.
+
+## Funktionsweise
+- Nutzer bestätigen, dass eine Drittanbieter-Anwendung auf bestimmte Daten oder Dienste in ihrem Konto zugreifen darf (z. B. E-Mail).
+- Nach Zustimmung erhält die App ein Zugriffstoken mit festgelegtem „Scope“ (Zugriffsbereich).
+- Beispiel: Eine App darf E-Mails senden, aber nicht auf den Cloudspeicher zugreifen.
+
+## Sicherheitsrisiken
+- Phishing-Angriffe können gefälschte OAuth-Anfragen stellen, um Zugriffstoken zu erhalten (z. B. Google-Dokument-Wurm 2017).
+
+## Wichtig
+- OAuth = Autorisierungssystem  
+- OpenID = Authentifizierungssystem  
+- OpenID Connect = Kombination aus Authentifizierung (OpenID) und Autorisierung (OAuth)
+
+---
+
+# AAA-Systeme (z. B. TACACS+, RADIUS)
+
+## TACACS+
+Ein vollständiges AAA-System:
+- **Authentifizierung**: Wer ist der Nutzer?
+- **Autorisierung**: Was darf der Nutzer?
+- **Abrechnung (Accounting)**: Was hat der Nutzer gemacht?
+
+Beispiel:
+- Netzwerkteam: Adminzugriff
+- Support: Schreibgeschützt
+- Andere: Kein Zugriff
+
+## RADIUS
+- Häufig verwendet für WLAN- oder VPN-Zugang
+- Gibt an, welche Netzwerkressourcen genutzt werden dürfen
+
+---
+
+## Was ist „Accounting“ im AAA-System?
+
+**Accounting** ist der dritte Bestandteil des AAA-Modells:
+- **Authentication** – Wer bist du?  
+- **Authorization** – Was darfst du?  
+- **Accounting** – Was hast du gemacht?
+
+## Zweck
+- Protokollierung von Zugriffen und Aktionen
+- Grundlage für Audits und Sicherheitsanalysen
+
+## Beispiele
+
+### TACACS+
+- Protokolliert Authentifizierungen
+- Zeichnet ausgeführte Befehle auf
+- Meldet z. B. Konfigurationsänderungen
+
+### RADIUS
+- Dokumentiert Sitzungsdauer, Bandbreite, Standort etc.
+- Wird für Abrechnung bei ISPs verwendet
+- Kein Mitschnitt von Inhalten (z. B. Webseiten)
+
+## Funktionsweise von RADIUS Accounting
+- Start: „Accounting-Start“-Paket vom NAS
+- Sitzung: Regelmäßige Status-Updates
+- Ende: „Accounting-Stop“-Paket
+
+## Fazit
+Accounting ist zentral für:
+- Überwachung
+- Nachvollziehbarkeit
+- Abrechnung
+- Sicherheitsanalysen
+
+---
+
+# Netzwerkhärtung – Überblick
+
+## Ziel
+Netzwerke durch gezielte Maßnahmen absichern.
+
+## Grundprinzipien der Netzwerksicherheit
+- Unnötige Dienste deaktivieren
+- Zugriff auf Dienste beschränken
+- **„Implicit Deny“**: Alles ist standardmäßig verboten
+- Zugriff nur per ACLs oder Firewallregeln erlauben
+
+---
+
+## Netzwerküberwachung und -analyse
+
+### Ziel
+Abweichungen vom normalen Verhalten erkennen
+
+### Voraussetzungen
+- Definition eines Normalzustands („Baseline“)
+
+### Protokollanalyse
+- Logs von Firewalls, Servern, Anwendungen auswerten
+- Hinweise auf Malware oder unautorisierten Zugriff
+- Verhaltensanalysen
+
+### Tools
+- **Splunk**: Analyse, Visualisierung, Alarmierung
+
+### Alarmierungen
+- Warnungen bei Regelverstößen
+- Priorisierung und Benachrichtigung per Mail, SMS etc.
+
+---
+
+## Flood Guards und DoS-Schutz
+
+### Schutzmaßnahmen
+- Schutz vor SYN-Floods u. ä.
+- Installierbar auf Routern, Firewalls
+
+### Beispiel
+- **Fail2ban**: Erkennung und Blockierung verdächtiger IPs
+
+---
+
+## Netzwerksegmentierung
+
+### Funktionsweise
+- Trennung von Netzwerken in VLANs
+- Z. B. Drucker- und Mitarbeiternetzwerk getrennt
+
+### Vorteile
+- Eingeschränkter Zugriff
+- Mehr Kontrolle
+- Übersichtlichkeit
+
+---
+
+# Netzwerkhardware-Härtung
+
+### DHCP-Sicherheit
+- **Rogue DHCP-Angriffe**: Falsche IP/DNS verteilen
+- **DHCP Snooping**:
+  - Überwacht DHCP-Traffic
+  - Erlaubt nur Antworten von „trusted“ Ports
+  - Erstellt IP-zu-Port-Liste
+
+### Schutztechnologien
+- **Dynamic ARP Inspection (DAI)**:
+  - Verhindert gefälschte ARP-Antworten
+  - Nutzt DHCP-Snooping-Tabellen
+- **IP Source Guard (IPSG)**:
+  - Blockiert Pakete mit gefälschter IP
+
+### Netzwerkzugriff absichern
+- **802.1X / EAPoL**:
+  - Authentifizierung vor Netzwerkzugriff
+  - Authenticator (z. B. Switch) → RADIUS
+  - **EAP-TLS**: Zertifikatsbasierte, sichere Authentifizierung
+
+### Zertifikate
+- Verwaltung & Schutz der privaten Schlüssel
+- Bindung an TPM-Chip empfohlen
+
+---
+
+# Netzwerksoftware-Härtung
+
+## 1. Firewalls – Überblick
+
+### Arten von Firewalls
+
+- **Netzwerkbasierte Firewalls**  
+  - Zwischen internem Netzwerk und Internet  
+  - Kontrollieren ein- und ausgehenden Traffic
+
+- **Hostbasierte Firewalls**  
+  - Direkt auf Endgerät (z. B. Windows-PC)
+  - Schutz einzelner Geräte (besonders wichtig in WLAN-Hotspots)
+
+### Empfehlung
+- Kombination beider Arten für optimalen Schutz
+
+---
+
+# Single Sign-on (SSO) – Zusammenfassung
+
+## Was ist SSO?
+Single Sign-on (SSO) ist ein Authentifizierungsverfahren, bei dem sich Nutzer einmalig anmelden, um auf mehrere Dienste zuzugreifen – ohne sich bei jedem Dienst erneut authentifizieren zu müssen.
+
+## Wie funktioniert es?
+- Die Anmeldung erfolgt zentral, z. B. über einen LDAP-Server oder ein Kerberos-System.
+- Nach der Authentifizierung erhält der Nutzer ein Token oder Ticket, mit dem er auf andere Anwendungen zugreifen kann.
+- Beispiel: Kerberos nutzt ein sogenanntes Ticket Granting Ticket (TGT).
+
+## Vorteile
+- Nur ein Satz Anmeldedaten notwendig  
+- Weniger Passwort-Reset-Anfragen  
+- Höhere Benutzerfreundlichkeit und Produktivität
+
+## Sicherheitsrisiken
+- Kompromittiertes Konto ermöglicht Zugriff auf mehrere Dienste  
+- SSO-Tokens oder -Cookies können gestohlen werden  
+- Multi-Faktor-Authentifizierung (MFA) empfohlen, schützt aber nicht vor Session-Diebstahl
+
+## Beispiel: OpenID
+- Dezentrales SSO-System  
+- Authentifizierung durch externen Identitätsanbieter  
+- Nutzer erhalten ein Token zur Anmeldung bei Diensten  
+- Keine zusätzliche Registrierung auf jeder Website nötig
+
+---
+
+# OAuth
+
+## Definition
+OAuth ist ein Autorisierungsstandard, der Drittanbieter-Apps Zugriff auf Dienste erlaubt, ohne dass Nutzer ihre Anmeldedaten direkt weitergeben müssen.
+
+## Funktionsweise
+- Nutzer erteilen einer Drittanbieter-App Zugriff auf bestimmte Daten  
+- Die App erhält ein Zugriffstoken mit definiertem Geltungsbereich („Scope“)  
+- Beispiel: Zugriff auf E-Mails, aber nicht auf Cloudspeicher
+
+## Sicherheitsrisiken
+- Phishing durch gefälschte OAuth-Anfragen  
+- Beispiel: Google-Dokument-Wurm (2017)
+
+## Wichtig
+- OAuth = Autorisierung  
+- OpenID = Authentifizierung  
+- OpenID Connect = Kombination aus OAuth und OpenID
+
+---
+
+# AAA-Systeme
+
+## Bestandteile
+- **Authentication** – Wer bist du?  
+- **Authorization** – Was darfst du?  
+- **Accounting** – Was hast du gemacht?
+
+## TACACS+
+- Vollständiges AAA-System  
+- Zeichnet Befehle und Zugriffe auf  
+- Beispiel: Netzwerkteam (Adminrechte), Support-Team (Leserechte)
+
+## RADIUS
+- Für WLAN/VPN-Zugang  
+- Bestimmt, welche Ressourcen genutzt werden dürfen
+
+---
+
+## Accounting im Detail
+
+### Zweck
+- Protokollierung der Aktivitäten von Nutzern  
+- Grundlage für Audits, Sicherheit und Abrechnung
+
+### TACACS+
+- Zeichnet Anmeldungen, Befehle und Änderungen auf
+
+### RADIUS
+- Erfasst Sitzungsdauer, Bandbreite und Standort  
+- Keine Protokollierung von Inhalten
+
+### Technische Umsetzung (RADIUS)
+- „Accounting-Start“-Paket beim Verbindungsaufbau  
+- Regelmäßige Updates während der Sitzung  
+- „Accounting-Stop“-Paket am Ende
+
+---
+
+# Netzwerkhärtung
+
+## Ziel
+Erhöhung der Netzwerksicherheit durch gezielte Konfiguration und Überwachung
+
+## Prinzipien
+- Unnötige Dienste deaktivieren  
+- „Implicit Deny“: Alles ist verboten, außer ausdrücklich erlaubt  
+- Umsetzung mit ACLs und Firewalls
+
+---
+
+## Netzwerküberwachung
+
+### Ziel
+Erkennung von Abweichungen vom Normalzustand
+
+### Protokollanalyse
+- Logs auswerten (Firewalls, Server, Apps)  
+- Hinweise auf Malware, Angriffe oder verdächtiges Verhalten  
+- Besonders externe Dienste überwachen
+
+### Tools
+- Beispiel: Splunk  
+- Analyse, Visualisierung, Alarmierung
+
+### Alarmierungen
+- Regelbasierte Warnungen  
+- Priorisierung und Benachrichtigung per E-Mail, SMS etc.
+
+---
+
+## Flood Guards / DoS-Schutz
+
+- Schutz der Verfügbarkeit durch Erkennung typischer Angriffe  
+- Beispiel: SYN-Floods  
+- Einsatz auf Firewalls und Routern  
+- Tool-Beispiel: Fail2ban (automatisches Sperren angreifender IPs)
+
+---
+
+# Netzwerksegmentierung
+
+## Funktionsweise
+- Aufteilung in VLANs zur Trennung von Diensten  
+- Beispiel: Trennung von Druckernetz und Mitarbeiter-Netzwerk
+
+## Vorteile
+- Begrenzter Zugriff  
+- Bessere Kontrolle und Übersicht  
+- ACLs regeln die Kommunikation zwischen Segmenten
+
+---
+
+# Netzwerkhardware-Härtung
+
+## DHCP-Sicherheit
+- Rogue DHCP-Server können falsche Netzwerkinfos liefern  
+- **DHCP Snooping** schützt durch:  
+  - Überwachung von DHCP-Paketen  
+  - Erstellen einer IP-zu-Port-Tabelle  
+  - Akzeptanz von Antworten nur an „trusted“ Ports
+
+## Weitere Maßnahmen
+- **Dynamic ARP Inspection (DAI)**  
+  - Verhindert gefälschte ARP-Antworten  
+  - Nutzt die Snooping-Tabelle  
+- **IP Source Guard (IPSG)**  
+  - Blockiert Pakete mit gefälschter IP
+
+---
+
+## 802.1X – Authentifizierung im Netzwerk
+
+- **EAPoL (Extensible Authentication Protocol over LAN)**  
+  - Client (Supplicant) authentifiziert sich über Switch (Authenticator) beim Auth-Server (z. B. RADIUS)  
+- **EAP-TLS**  
+  - Zertifikatsbasierte Authentifizierung  
+  - Sehr sicher, aber verwaltungsintensiv  
+  - Ideal für WLANs und Unternehmensnetzwerke
+
+## Sicherheit erhöhen
+- Zertifikate an TPM binden  
+- Kombination mit Full Disk Encryption (FDE)
+
+---
+
+# Netzwerksoftware-Härtung
+
+## Firewalls
+
+### Netzwerkbasierte Firewalls
+- Kontrollieren gesamten Verkehr zwischen Netzwerk und Internet  
+- Typisches Einsatzgebiet: Gateway/Router
+
+### Hostbasierte Firewalls
+- Installiert auf einzelnen Geräten (z. B. Windows-PC)  
+- Besonders wichtig in offenen Netzwerken
+
+### Empfehlung
+- Kombination beider Varianten für optimalen Schutz
+
