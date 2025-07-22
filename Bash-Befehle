@@ -1,0 +1,25 @@
+# Linux-Befehle & Dateisystem – Zusammenfassung
+
+## Verzeichnisse & Pfade
+
+- **Root-Verzeichnis**: `/` ist das Stammverzeichnis (wie `C:\` unter Windows).
+- **Beispielpfad**: `/home/cindy/Desktop` entspricht ungefähr `C:\Users\Cindy\Desktop`.
+
+## Wichtige Verzeichnisse unter `/`
+
+- `/bin` – Wichtige Programme & Binärdateien (z. B. `ls`)
+- `/etc` – Systemkonfigurationsdateien
+- `/home` – Persönliche Nutzerverzeichnisse
+- `/proc` – Informationen zu laufenden Prozessen
+- `/usr` – Vom Nutzer installierte Software (nicht Nutzerdaten!)
+- `/var` – Logdateien, temporäre und sich häufig ändernde Dateien
+
+## `ls` – Verzeichnisinhalte anzeigen
+
+```bash
+ls /
+ls <Pfad>
+
+ls -l     # Lange Liste, zeigt Details zu Dateien
+ls -a     # Zeigt alle Dateien inkl. versteckter (mit . beginnend)
+ls -la    # Kombination von -l und -a
